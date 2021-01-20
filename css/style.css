@@ -1,0 +1,1508 @@
+/**
+ * Template Name    :Event
+ * @author          :Ahmed.khemiri
+ * Template Url:    :
+ * Contact Me:      :khemiriahmed6@gmailcom 
+ **/
+
+@font-face {
+    font-family: Poppins;
+    src: url('../webfonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+/************Start Default************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 13px
+}
+
+.btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 12px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 15px
+}
+
+.btn a {
+    background-color: #f40057;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    padding: 11px 16px;
+    width: 160px;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    border: 1px solid #f40057;
+    text-transform: uppercase
+}
+
+.bloc-horizontal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.bloc-alt {
+    margin: 80px 0
+}
+
+.bloc-alt h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 34px
+}
+
+.bloc-alt p {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 13px
+}
+
+.bloc-alt .icon i {
+    color: #f40057
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto
+}
+
+
+/************Fin Default************/
+
+
+/************Start Header************/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+header .logo {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+header .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer
+}
+
+header .toggle.active {
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer
+}
+
+nav {
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: 0;
+    margin-top: -297px
+}
+
+nav.active {
+    visibility: visible;
+    margin-top: 0;
+    background: rgba(112, 97, 239, 0.45);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    padding: 0 35px
+}
+
+nav.menu ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+nav.menu li {
+    padding: 10px 6px;
+    letter-spacing: 1px;
+    position: relative
+}
+
+nav.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize
+}
+
+nav.menu li a:hover,
+nav.menu li.active a {
+    color: #f40057;
+    font-weight: 700;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in
+}
+
+nav.menu li.active a:after {
+    background: #f40057;
+    bottom: 0;
+    content: '';
+    height: 3px;
+    left: 10px;
+    position: absolute;
+    width: calc(100% - 15px)
+}
+
+.header-fixed {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.72);
+    padding: 6px 100px
+}
+
+.header-fixed nav.active {
+    background-color: rgba(168, 49, 216, 0%)
+}
+
+
+/************Fin Header************/
+
+
+/************Start Showcase************/
+
+.showcase {
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #7061ef;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    z-index: 2
+}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8
+}
+
+.showcase .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7061ef;
+    mix-blend-mode: overlay
+}
+
+.showcase .text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+
+.showcase .text h2 {
+    font-size: 65px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase
+}
+
+.showcase .text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0;
+    color: #fff;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase
+}
+
+.showcase .text h4 {
+    font-size: 50px
+}
+
+.showcase address,
+.showcase .text h4 {
+    color: #fff
+}
+
+.showcase address {
+    font-size: 11px;
+    letter-spacing: 2px
+}
+
+address::before,
+address::after {
+    border-top: 1px dotted white;
+    content: "";
+    width: 280px;
+    display: block;
+    text-align: center;
+    margin: auto
+}
+
+.btn a:hover {
+    letter-spacing: 3px;
+    background-color: #b15fd6;
+    border: 1px solid #b15fd6
+}
+
+
+/************ End Showcase************/
+
+
+/************Start About************/
+
+.about {
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.about-event {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 25px
+}
+
+.about-left,
+.about-right {
+    width: 50%
+}
+
+.about-left p {
+    padding: 18px 0
+}
+
+.about .date {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 12px
+}
+
+.about h4 {
+    font-size: 13px;
+    color: #252424;
+    font-weight: normal;
+}
+
+.about .date .icon {
+    width: 35px
+}
+
+.about .date .icon i {
+    font-size: 21px
+}
+
+.btn a:nth-child(2) {
+    margin-left: 14px;
+    background-color: #fff;
+    color: #f40057
+}
+
+.btn a:nth-child(2):hover {
+    border: 1px solid #b15fd6;
+    background: #b15fd6;
+    color: #fff
+}
+
+.about-right img {
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff
+}
+
+
+/************ End About************/
+
+
+/************Start Schedule************/
+
+.schedule,
+.testimonials {
+    background-image: url(../images/bg-schedule.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center
+}
+
+.overlay-schedule {
+    background-color: rgba(112, 97, 239, 0.63);
+    height: 500px;
+    padding-bottom: 40px
+}
+
+.schedule .schedule-tab {
+    width: 63%;
+    margin: auto;
+    position: absolute;
+    top: 110px;
+    -webkit-box-shadow: 6px 25px 8px #e8dbdb;
+    -moz-box-shadow: 6px 25px 8px #e8dbdb;
+    -ms-box-shadow: 6px 25px 8px #e8dbdb;
+    -o-box-shadow: 6px 25px 8px #e8dbdb;
+    box-shadow: 6px 25px 8px #e8dbdb;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.schedule .dynamic-tab .tab-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    width: 100%
+}
+
+.schedule .dynamic-tab li {
+    width: 33.3333%;
+    border-bottom: 1px solid #ccc
+}
+
+.schedule .dynamic-tab .tab-list h2 span {
+    display: block;
+    text-transform: capitalize;
+    font-weight: 400
+}
+
+.schedule .dynamic-tab .tab-list h2 {
+    padding: 13px 10px;
+    border-right: 1px solid #ccc;
+    font-size: 12px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    text-transform: uppercase
+}
+
+.schedule .dynamic-tab .tab-list h2:hover {
+    color: #f40057
+}
+
+.schedule .dynamic-tab,
+.schedule .content-list {
+    background-color: #fff
+}
+
+.schedule .dynamic-tab .tab-list .active h2 {
+    color: #fff
+}
+
+.schedule .dynamic-tab .tab-list .active {
+    border-bottom: 1px solid #000;
+    background-image: url(../images/bg-micro.jpg)
+}
+
+.schedule .content-list .content-one,
+.schedule .content-list .content-two {
+    display: none
+}
+
+.schedule .content-list>div {
+    padding: 55px 35px
+}
+
+.schedule .content-list .display- {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.schedule .content-list .display- .blc-img {
+    width: 7%;
+    margin-right: 2%
+}
+
+.schedule .content-list .display- .blc-text {
+    width: 90%
+}
+
+.schedule .content-list .display- .blc-img img {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -o-border-radius: 50px;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    max-width: 100%;
+    height: 50px
+}
+
+.schedule .content-list .display- .blc-text h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #c7c7c7;
+    width: 85%;
+    padding-bottom: 11px;
+    position: relative;
+    cursor: pointer
+}
+
+.schedule .content-list .display- .blc-text i {
+    position: absolute;
+    right: 0;
+    top: 5px
+}
+
+.schedule .content-list .display- .blc-text h3 {
+    font-size: 12px;
+    padding: 10px 0;
+    font-weight: 400
+}
+
+.schedule .content-list .display- .blc-text span {
+    color: #f40057;
+}
+
+.schedule .content-list .display- .blc-text p {
+    color: #000;
+    display: block;
+    width: 76%;
+    display: none
+}
+
+
+/************End  Schedule************/
+
+
+/************Start Tickets************/
+
+.tickets {
+    margin-top: 215px
+}
+
+.tickets .fa-ticket-alt {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.register::after,
+.tickets::after {
+    border-top: 1px dotted #c7c7c7;
+    content: "";
+    width: 100%;
+    display: block;
+    margin-top: 80px
+}
+
+footer .grid,
+.card-rectangle,
+.card-tickets,
+.card-spoker {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    padding-top: 60px
+}
+
+.card-tickets .bloc-img {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 10px 10px 0 0px;
+    -moz-border-radius: 10px 10px 0 0px;
+    -o-border-radius: 10px 10px 0 0px;
+    -ms-border-radius: 10px 10px 0 0px;
+    border-radius: 10px 10px 0 0px
+}
+
+.card-spoker .card,
+.card-tickets .card {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    -ms-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    -o-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    padding-bottom: 15px
+}
+
+.card-spoker .card:hover,
+.card-tickets .card:hover {
+    -webkit-box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    -ms-box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    -o-box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px
+}
+
+.card-tickets .overlay-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    background-color: rgba(112, 97, 239, 0.63);
+    -webkit-border-radius: 10px 10px 0 0px;
+    -moz-border-radius: 10px 10px 0 0px;
+    -o-border-radius: 10px 10px 0 0px;
+    -ms-border-radius: 10px 10px 0 0px;
+    border-radius: 10px 10px 0 0px
+}
+
+.card-tickets ul {
+    padding: 7px 10px;
+    text-align: center
+}
+
+.card-tickets ul li {
+    padding: 5px 0
+}
+
+.card-tickets .overlay-img {
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    transition: all .9s ease
+}
+
+.card-tickets .card img {
+    width: 100%;
+    -webkit-border-radius: 10px 10px 0 0px;
+    -moz-border-radius: 10px 10px 0 0px;
+    -o-border-radius: 10px 10px 0 0px;
+    -ms-border-radius: 10px 10px 0 0px;
+    border-radius: 10px 10px 0 0px;
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    transition: all .9s ease
+}
+
+.card-tickets .card:hover img,
+.card-tickets :hover .overlay-img {
+    opacity: 0.7;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15)
+}
+
+.card-tickets h2,
+.card-tickets h3 {
+    padding: 0 0 0 20px
+}
+
+.card-tickets h3 {
+    padding-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+.card-tickets h2 span {
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.card-tickets .vip {
+    background: #fff436;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 163px;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    right: -55px;
+    top: 21px;
+    -webkit-clip-path: polygon(65% 0%, 78% 82%, 13% 100%, 28% 4%);
+    clip-path: polygon(65% 0%, 78% 82%, 13% 100%, 28% 4%)
+}
+
+.card-tickets .btn {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.card-tickets:hover .overlay-img.active {
+    background-color: rgba(168, 49, 216, 0%)
+}
+
+
+/************ End  Tickets************/
+
+
+/*************Start Card spokers**************/
+
+.testimonials .rectangle,
+.card-spoker .card {
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    padding: 35px;
+    text-align: center
+}
+
+.card-spoker img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%
+}
+
+.card-spoker .img-person {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto
+}
+
+.card-spoker .card .img-overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all .5s ease-in-out;
+    -moz--transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0
+}
+
+.card-spoker .card:hover .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(112, 97, 239, 0.63);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transformtransform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    visibility: visible
+}
+
+.social-media a {
+    color: #fff;
+}
+
+.social-media a:hover {
+    color: #f40057;
+}
+
+.card-spoker h3 {
+    color: #f40057;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 0 20px 0
+}
+
+.card-spoker h3::after {
+    border-top: 2px dotted #e6e6e6;
+    content: "";
+    display: block;
+    width: 70px;
+    margin: auto;
+    margin-top: 18px
+}
+
+
+/************* End  spokers**************/
+
+
+/************* Start Sponsors**************/
+
+.sponsors {
+    background-color: #2e2e2e;
+    padding-bottom: 35px
+}
+
+.testimonials h1,
+.schedule h1,
+.sponsors h1 {
+    color: #fff;
+    padding-top: 20px
+}
+
+.schedule p,
+.testimonials p,
+.sponsors p {
+    color: #fff
+}
+
+.brand-sponsors {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: auto;
+    padding: 17px 0
+}
+
+.brand-sponsors i {
+    color: #fff;
+    font-size: 70px
+}
+
+.map.bloc-alt,
+.sponsors.bloc-alt {
+    margin-bottom: 0
+}
+
+.map p {
+    padding-bottom: 30px
+}
+
+.testimonials.bloc-alt {
+    margin-top: 0
+}
+
+
+/************* End  Sponsors**************/
+
+
+/*************Start Testismonials**************/
+
+.testimonials {
+    background-image: url(../images/bg-testimonials.jpg);
+}
+
+.testimonials .card-rectangle .rectangle {
+    -webkit-transition: all .5s ease-in-out;
+    -moz--transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out
+}
+
+.testimonials .card-rectangle .rectangle:hover {
+    -webkit-box-shadow: 12px 15px 8px #e8dbdb;
+    -moz-box-shadow: 12px 15px 8px #e8dbdb;
+    -ms-box-shadow: 12px 15px 8px #e8dbdb;
+    -o-box-shadow: 12px 15px 8px #e8dbdb;
+    box-shadow: 12px 15px 8px #e8dbdb;
+    color: #b764da
+}
+
+.testimonials .card-rectangle p {
+    color: #000;
+    margin-top: 40px
+}
+
+.testimonials .card-rectangle .blc-img {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    top: -50px;
+    right: 0
+}
+
+.testimonials .card-rectangle .rectangle {
+    position: relative
+}
+
+.testimonials .card-rectangle .rectangle img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid white
+}
+
+.testimonials .card-rectangle .rectangle .stars {
+    padding: 12px 0
+}
+
+.testimonials .card-rectangle .rectangle h3 {
+    color: #867a7a;
+    font-size: 13px;
+    font-weight: 400
+}
+
+.testimonials .card-rectangle .rectangle h2 {
+    font-size: 18px
+}
+
+.testimonials .card-rectangle i {
+    color: #f40057
+}
+
+
+/*************End Testismonials**************/
+
+
+/*************Start Register*****************/
+
+.register .form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    width: 80%;
+    padding-top: 50px;
+    margin: auto
+}
+
+.register .form input[type*=text],
+.register .form select {
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    height: 34px;
+    width: 213px;
+    padding-left: 20px;
+    outline: none
+}
+
+ ::placeholder {
+    color: #aaaaaa;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: 11px
+}
+
+.register .btn {
+    padding-top: 30px
+}
+
+.register a {
+    margin: auto
+}
+
+
+/*************End Register**************/
+
+
+/************* Start Faq******************/
+
+.faqs .questions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    width: 83%;
+    margin: auto;
+    margin-top: 60px
+}
+
+.faqs .questions .card-head {
+    background-color: #fafafa;
+    padding: 10px;
+    cursor: pointer
+}
+
+.faqs .questions .card-head h2 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #474747
+}
+
+.faqs .questions .card-head h2 {
+    position: relative;
+}
+
+.faqs .questions .card-head i {
+    position: absolute;
+    right: 0
+}
+
+.faqs .questions .card {
+    border: 1px solid #cecece
+}
+
+.faqs .questions .card-body {
+    padding: 10px 35px;
+    display: none
+}
+
+.faqs .questions .general-question>h2,
+.faqs .questions .your-account>h2 {
+    text-align: center;
+    padding-bottom: 30px
+}
+
+.faqs .questions .general-question,
+.faqs .questions .your-account {
+    width: 45%
+}
+
+
+/*************End Faq***************/
+
+
+/*************Start Footer***************/
+
+footer {
+    background-color: #1f1f1f;
+    color: #fff
+}
+
+footer div[class*="blc"] {
+    width: 33.3333%
+}
+
+footer p {
+    color: #989898;
+    font-size: 12px;
+    padding: 10px 0
+}
+
+footer h2 {
+    text-transform: uppercase
+}
+
+footer .blc-1 i {
+    font-size: 13px
+}
+
+footer .fa-envelope,
+footer .fa-phone-alt {
+    color: #f40057
+}
+
+footer .fa-envelope a,
+footer .fa-phone-alt span {
+    color: #f40057;
+    font-size: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+footer .blc-2 h2 {
+    font-size: 16px
+}
+
+footer .blc-2 span {
+    display: block;
+    color: #989898
+}
+
+footer .blc-2 p {
+    color: #bebebe
+}
+
+footer .btn- {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+footer .blc-3 a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #acacac;
+    padding: 2px 8px;
+    margin: 4px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px
+}
+
+footer .blc-3 a:hover {
+    color: #f40057;
+    border: 1px solid #f40057;
+}
+
+footer .blc-4 input {
+    outline: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    height: 30px;
+    padding-left: 10px
+}
+
+footer .footer-copyright {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+footer .copyright {
+    background-color: #1a1a1a
+}
+
+footer .copyright span {
+    color: #f40057;
+    font-size: 22px
+}
+
+
+/*************End Footer***************/
+
+
+/*************Start Scroll To Top***************/
+
+.scroll-top {
+    background-color: #333;
+    padding: 0 9px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #f40057;
+    position: fixed;
+    bottom: 10px;
+    right: 13px;
+    font-size: 30px;
+    display: none
+}
+
+
+/*************End Scroll To Top***************/
+
+
+/* IE10+ CSS styles  here */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active),
+(-ms-accelerator: true) {
+    .showcase .overlay {
+        opacity: 0.2;
+        zoom: 1;
+        filter: alpha(opacity=20);
+    }
+    .about-right img {
+        width: inherit !important;
+        margin-right: 17px;
+    }
+    .bloc-verticale {
+        width: 100%
+    }
+}
+
+
+/* IE10+ CSS styles  here *
+
+
+/****************Responsive******************/
+
+@media (max-width: 991px) {
+    .showcase,
+    .showcase header {
+        padding: 10px 10px
+    }
+    .showcase .text h2 {
+        font-size: 3em
+    }
+    .showcase .text h3,
+    .showcase .text h4 {
+        font-size: 1em
+    }
+    nav.menu ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: all .7s ease-in-out;
+        -moz--transition: all .7s ease-in-out;
+        -o-transition: all .7s ease-in-out;
+        -ms-transition: all .7s ease-in-out;
+        transition: all .7s ease-in-out;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 0%;
+        background-color: rgba(112, 97, 239, 0.65);
+    }
+    nav.menu.active ul {
+        width: 100%;
+    }
+    nav {
+        -webkit-transition: all .0s ease-in-out;
+        -moz--transition: all .0s ease-in-out;
+        -o-transition: all .0s ease-in-out;
+        -ms-transition: all .0s ease-in-out;
+        transition: all .0s ease-in-out
+    }
+    nav.menu ul a {
+        font-size: 24px;
+        font-weight: bold
+    }
+    .bloc-alt {
+        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .bloc-alt h1 {
+        font-size: 28px;
+    }
+    .about-event {
+        display: block;
+    }
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+    .about-right img {
+        width: 60%;
+    }
+    .bloc-horizontal,
+    .bloc-verticale {
+        width: 67%;
+        margin: auto;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .schedule .schedule-tab {
+        width: 90%;
+        top: 98px
+    }
+    .card-tickets,
+    .card-spoker,
+    .card-rectangle,
+    footer .grid,
+    footer .footer-copyright {
+        display: block;
+        padding-bottom: 20px;
+    }
+    .tickets {
+        margin-top: 215px;
+    }
+    .tickets .card,
+    .card-spoker .card,
+    .testimonials .card-rectangle .rectangle {
+        display: inline-flex;
+        flex-direction: column;
+        width: 48%;
+    }
+    .card-spoker .img-person {
+        height: auto;
+        width: auto;
+    }
+    .card-spoker img {
+        width: 100%;
+        height: 100%;
+    }
+    .card-spoker h2 {
+        font-size: 18px;
+    }
+    .brand-sponsors:nth-child(2) {
+        padding: 0;
+    }
+    .register .form {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .register .form input,
+    select {
+        margin-top: 10px;
+    }
+    .faqs .questions {
+        width: 100%
+    }
+    .faqs .questions .your-account>h2,
+    .faqs .questions .general-question>h2 {
+        font-size: 19px;
+        max-height: 59px;
+    }
+    .testimonials .overlay-schedule {
+        height: auto;
+    }
+    .schedule .dynamic-tab .tab-list {
+        height: 70px;
+    }
+    .schedule .content-list>div {
+        padding: 9px 11px;
+    }
+    .schedule .content-list .display- .blc-text p {
+        width: inherit
+    }
+    .schedule .dynamic-tab .tab-list h2 {
+        font-size: 11px;
+    }
+    .schedule .content-list .display- .blc-text h2 {
+        width: 98%
+    }
+    .faqs .questions .card-body {
+        padding: 6px 8px;
+    }
+    footer .copyright {
+        text-align: center;
+    }
+    footer div[class*="blc"] {
+        text-align: center;
+        width: 100%;
+    }
+    footer .btn- {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+
+/*************End Responsive******************/
