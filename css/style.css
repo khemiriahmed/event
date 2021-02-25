@@ -171,7 +171,7 @@ nav {
 nav.active {
     visibility: visible;
     margin-top: 0;
-    background: rgba(112, 97, 239, 0.45);
+    background: rgba(253,253,255,0.42);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
